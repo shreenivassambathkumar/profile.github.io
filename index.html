@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shreenivas Sambath Kumar - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Calibri, Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 32pt;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+            text-align: center;
+        }
+        
+        .contact-info {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 11pt;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #2c5aa0;
+        }
+        
+        .contact-info a {
+            color: #2c5aa0;
+            text-decoration: none;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        .intro-section {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+        
+        .section {
+            margin-bottom: 20px;
+        }
+        
+        .section-header {
+            background-color: #2c5aa0;
+            color: white;
+            padding: 15px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14pt;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+            user-select: none;
+        }
+        
+        .section-header:hover {
+            background-color: #234a85;
+        }
+        
+        .section-header::after {
+            content: '+';
+            font-size: 20pt;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+        
+        .section-header.active::after {
+            content: '−';
+        }
+        
+        .section-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+            background-color: #ffffff;
+            border-left: 3px solid #2c5aa0;
+            border-right: 3px solid #2c5aa0;
+            border-bottom: 3px solid #2c5aa0;
+            border-radius: 0 0 5px 5px;
+        }
+        
+        .section-content.active {
+            max-height: 3000px;
+            padding: 20px;
+        }
+        
+        .section-content ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        .section-content li {
+            margin-bottom: 8px;
+        }
+        
+        .job-entry {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .job-entry:last-child {
+            border-bottom: none;
+        }
+        
+        .job-header {
+            font-size: 12pt;
+            font-weight: bold;
+            color: #1a1a1a;
+            margin-bottom: 5px;
+        }
+        
+        .duration {
+            font-style: italic;
+            color: #666;
+            font-size: 10pt;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .job-title {
+            font-weight: bold;
+            font-size: 11pt;
+            color: #2c5aa0;
+            margin-bottom: 10px;
+        }
+        
+        .subsection-title {
+            font-weight: bold;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            color: #2c5aa0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        
+        td, th {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #2c5aa0;
+            color: white;
+            font-weight: bold;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        strong {
+            font-weight: bold;
+            color: #1a1a1a;
+        }
+        
+        
+        .expand-all-button {
+            background-color: #28a745;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 11pt;
+            font-weight: bold;
+            margin-bottom: 20px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .expand-all-button:hover {
+            background-color: #218838;
+        }
+        
+                    @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                padding: 0;
+            }
+            
+            .section-header {
+                background-color: #2c5aa0 !important;
+                page-break-inside: avoid;
+            }
+            
+            .section-content {
+                max-height: none !important;
+                display: block !important;
+                padding: 20px !important;
+                page-break-inside: avoid;
+            }
+            
+            .section-header::after {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Shreenivas Sambath Kumar</h1>
+        <div class="contact-info">
+            <strong>Email:</strong> shreenivassambathkumar@gmail.com | 
+            <strong>Phone:</strong> +91-9944995895 | 
+            <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/shreenivass/" target="_blank">linkedin.com/in/shreenivass</a>
+        </div>
+
+        <div class="intro-section">
+            <p><strong>MY WHY</strong> - I am passionate and enthusiastic in helping Individuals, Teams, Executives, Scrum Masters, Product Owners, and Organizations in moving towards Agile ways of working. <strong>MY WHAT</strong> - I handled several challenges and played a variety of roles such as Scrum Master, Agile Coach, Transformation Lead, Agile Trainer, and Project Lead throughout my career. <strong>MY HOW</strong> - One of many things that keep me awake is by attaining knowledge through various mediums like trainings, blogs, webinars, meet-ups and gaining new accreditations; <strong>MY WHO</strong> - I have been in the industry for over 14 years now and worked in various domains across the Globe and delivered a variety of projects and products. <strong>MY PASSION</strong> - Teaching is my calling. I dedicate my time to empowering students across multiple colleges, delivering high-impact training in Project Management, Product Management, Agile & Scrum Framework, Kanban for value optimization, Python programming, and Git mastery. My teaching philosophy is simple: make complex concepts crystal clear through practical demonstrations and real-world examples. I don't just teach theory—I focus on measurable outcomes, ensuring every student walks away with skills they can immediately apply and confidently demonstrate.</p>
+        </div>
+
+        <!-- SUMMARY -->
+        <div class="section">
+            <div class="section-header" onclick="toggleSection(this)">
+                SUMMARY
+            </div>
+            <div class="section-content">
+                <ul>
+                    <li>Delivered projects/products in On-premises & Cloud environments</li>
+                    <li>Implemented Scrum, Kanban, Scrum with Kanban & Scaled Scrum in teams</li>
+                    <li>Developed self-managing and high-performing teams from scratch</li>
+                    <li>Hands-on experience of Agile/Scrum Values & Agile Principles</li>
+                    <li>Worked within other Agile Methodologies - Lean, Extreme Programming (XP), Test Driven Development (TDD)</li>
+                    <li>Well versed with Software Development Practices such as Test-Driven Development (TDD), Acceptance Test Driven (ATDD) & Behavior Driven Development (BDD)</li>
+                    <li>Implemented DevOps culture and working practices - Continuous Build (CB), Continuous Integration (CI), Continuous Delivery (CD) & Continuous Testing (CT)</li>
+                    <li>Efficient user of JIRA, Confluence, MS Teams, MS White Board, Slido & Menti tools</li>
+                    <li>Good working experience in understanding requirements, creating project plans, applying Scrum framework and implementing Scrum events in Project Management with geographically distributed teams</li>
+                    <li>Expertise in handling Azure DevOps and JIRA tools for managing backlogs, sprints, and user stories</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- MY LEADERSHIP STYLE -->
+        <div class="section">
+            <div class="section-header" onclick="toggleSection(this)">
+                MY LEADERSHIP STYLE
+            </div>
+            <div class="section-content">
+                <p>Coach, Teach, Train, Facilitate, Mentor, Servant Leader, Manager, Change Agent, Impediment Remover, Collaborator, Experimenter, and Influencer</p>
+            </div>
+        </div>
+
+        <!-- MY ETHICS -->
+        <div class="section">
+            <div class="section-header" onclick="toggleSection(this)">
+                MY ETHICS
+            </div>
+            <div class="section-content">
+                <p>Responsible to the profession, Act within my ability, No abuse of power, Ensure being valued, Continue professional development, Maintain confidentiality & Information Security, Agree on Boundaries, Social responsibility, and inclusion</p>
+            </div>
+        </div>
+
+        <!-- MY ACADEMICS -->
+        <div class="section">
+            <div class="section-header" onclick="toggleSection(this)">
+                MY ACADEMICS
+            </div>
+            <div class="section-content">
+                <ul>
+                    <li><strong>Bachelor of Science in Computer Science</strong> | June 2007 - April 2010</li>
+                    <li><strong>Master of Business Administration</strong> | June 2025</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- CERTIFICATIONS -->
+        <div class="section">
+            <div class="section-header" onclick="toggleSection(this)">
+                CERTIFICATIONS
+            </div>
+            <div class="section-content">
+                <ul>
+                    <li>SAFe 6.0 Agilist</li>
+                    <li>Training from the Back of the Room – Practitioner</li>
+                    <li>Professional Agile Leadership Evidence Based Management from Scrum.Org</li>
+                    <li>Professional Scrum Master (PSM-1) from Scrum.Org</li>
+                    <li>Professional Scrum Master (PSM-2) from Scrum.Org</li>
+                    <li>Professional Scrum Product Backlog Management Skills from Scrum.Org</li>
+                    <li>Professional Scrum Product Owner (PSPO-1) from Scrum.Org</li>
+                    <li>Scrum Better with Kanban from Kanban University</li>
+                    <li>Gen AI Overview for Project Managers</li>
+                    <li>Professional Kanban I from ProKanban.Org</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- MY KEY SKILLS -->
+        <div class="section">
+            <div class="section-header" onclick="toggleSection(this)">
+                MY KEY SKILLS
+            </div>
+            <div class="section-content">
+                <p><strong>Scrum Master Skills:</strong> Meeting Facilitation, Agile Planning, Agile Estimation, Scrum Implementation, Backlog Refinement, Servant Leadership, Enforcing Rules, Removing Impediments, Scrum Events, Scrum Artifacts, Interpersonal Skills, Communication, Collaboration, Time Management, Detail Oriented, Adaptable, Decision Making, Customer Service</p>
+
+                <p><strong>Management Experience:</strong> Led various projects and releases, managed and experienced various phases of project life cycle including Initiating, Planning, Executing, Monitoring, Controlling and Closing</p>
+
+                <p><strong>Business Development:</strong> Managing the Client, Contract, Offshore/Onsite resources, releases/deliverables, and tasks. Responsible for Project Key Milestones and deliverables</p>
+
+                <p><strong>Project Management Tools:</strong> Azure DevOps & JIRA</p>
+
+                <p><strong>Domains:</strong> Healthcare, Medical Devices, Telephony, Media, Entertainment, Banking & Financial Services</p>
+            </div>
+        </div>
+
+        <!-- PROFESSIONAL EXPERIENCE -->
+        <div class="section">
+            <div class="section-header" onclick="toggleSection(this)">
+                PROFESSIONAL EXPERIENCE
+            </div>
+            <div class="section-content">
+                
+                <!-- HCL Software -->
+                <div class="job-entry">
+                    <div class="job-header">HCL Software</div>
+                    <span class="duration">January 2025 - Present</span>
+                    <div class="job-title">Senior Product Manager</div>
+                    
+                    <div class="subsection-title">Multi-Account Portfolio Management:</div>
+                    <ul>
+                        <li>Managing parallel delivery of multiple strategic accounts including Axis Bank (CDP), Banco de Chile (Unica Operations & Link Connector), Cigna (Unica Upgrade), and GMF Covea (Link Connector Implementation)</li>
+                        <li>Leading a team of 7 members for Axis Bank CDP implementation</li>
+                        <li>Delivering end-to-end Software-as-a-Service implementations and operational support</li>
+                    </ul>
+
+                    <div class="subsection-title">Key Achievements:</div>
+                    <ul>
+                        <li>Successfully delivered CDP Go-Live for Axis Bank</li>
+                        <li>Achieved Go-Live for Link Connector implementations with Banco de Chile, GMF Covea, and PensionDenmark</li>
+                        <li>Maintained 7-day average resolution time for Banco de Chile operational issues</li>
+                        <li>Developed and implemented SMS and WhatsApp channel support through HCL Link Connector for GMF Covea</li>
+                        <li>Successfully managing Cigna's Unica product upgrade from version 10X to 12X</li>
+                    </ul>
+
+                    <div class="subsection-title">Operational Excellence:</div>
+                    <ul>
+                        <li>Managing Unica product operations for Banco de Chile, monitoring incident tickets and coordinating with support teams for timely resolution</li>
+                        <li>Established regular customer cadence meetings to proactively address queries and maintain strong client relationships</li>
+                        <li>Implemented customer journey integrations through Link Connector solutions</li>
+                    </ul>
+
+                    <div class="subsection-title">Project & Process Management:</div>
+                    <ul>
+                        <li>Led projects using both Waterfall and Agile methodologies, ensuring high-quality delivery</li>
+                        <li>Implemented Scrum practices to enable iterative delivery, foster transparency, and drive continuous improvement</li>
+                        <li>Introduced Kanban techniques to optimize workflow, reduce bottlenecks, and improve throughput</li>
+                        <li>Implemented OKRs (Objectives & Key Results) to align team goals with organizational strategy</li>
+                        <li>Developed and executed detailed project plans, schedules, and resource strategies</li>
+                        <li>Acted as single point of contact for clients, vendors, and cross-functional teams</li>
+                        <li>Conducted governance meetings with stakeholders to review progress, risks, dependencies, and financial health</li>
+                        <li>Proactively managed risks, issues, and dependencies with mitigation plans</li>
+                        <li>Tracked budgets and optimized resource allocation across multiple projects</li>
+                        <li>Drove continuous improvement initiatives by capturing lessons learned</li>
+                    </ul>
+                </div>
+
+                <!-- Comcast -->
+                <div class="job-entry">
+                    <div class="job-header">Comcast</div>
+                    <span class="duration">April 2022 - January 2025</span>
+                    
+                    <div class="job-title">Agile Coach</div>
+                    <ul>
+                        <li>Led Agile transformation initiatives across the organization</li>
+                        <li>Led and mentored Scrum Masters and development teams</li>
+                        <li>Coached Product Owners on effective Product Backlog Management</li>
+                        <li>Introduced Scrum values of Focus, Openness, Respect, Courage and Commitment into teams</li>
+                        <li>Coached teams to become self-managing and high-performing</li>
+                        <li>Provided visibility of Road Maps and Release Plans to teams</li>
+                        <li>Established and ran Scrum Master Community of Practice</li>
+                        <li>Implemented Scrum & Kanban frameworks across the Delivery Centre</li>
+                        <li>Led and facilitated RAID (Risks, Assumptions, Issues, Dependencies) and End-to-End Delivery</li>
+                    </ul>
+
+                    <div class="job-title">Scrum Master</div>
+                    <ul>
+                        <li>Led Agile adoption within the organization, conducting training sessions and workshops to educate stakeholders on Agile principles and practices</li>
+                        <li>Improved Team Productivity by 20% by removing process wastes and implementing Lean delivery processes</li>
+                        <li>Supported Product Owner in managing customer expectations and stakeholder communications, resulting in increased customer engagement with new features</li>
+                        <li>Managed Scrum of Scrums to enable cross-team collaboration, highlight dependencies, and address integration points and conflicts</li>
+                        <li>Assisted in team development while holding teams accountable for commitments, leveraging organizational resources to improve project work capacity</li>
+                        <li>Worked closely with product management and technical stakeholders to clarify schedules, status, and project details</li>
+                        <li>Led cross-functional teams and facilitated collaboration according to organizational needs</li>
+                    </ul>
+                </div>
+
+                <!-- HCL Technologies Ltd. (2016-2022) -->
+                <div class="job-entry">
+                    <div class="job-header">HCL Technologies Ltd.</div>
+                    <span class="duration">February 2016 - February 2022</span>
+                    <div class="job-title">Project Manager/Scrum Master</div>
+                    <ul>
+                        <li>Supported Product Owner in managing customer expectations and stakeholder communications, resulting in increased customer engagement</li>
+                        <li>Assisted Developers in estimating backlog items and removing impediments</li>
+                        <li>Ensured availability and transparency of Scrum artifacts (Product Backlog, Sprint Backlog, Product Increment)</li>
+                        <li>Worked closely with product management and technical stakeholders on project schedules, status, and details</li>
+                        <li>Facilitated all Scrum Events including Sprint Planning, Daily Stand-ups, Sprint Reviews, and Sprint Retrospectives</li>
+                        <li>Maintained Release Plans, Burn-down and Burn-up charts</li>
+                        <li>Ensured Scrum events were properly time-boxed and identified Team Capacity</li>
+                        <li>Implemented Agile methodologies using Scrum framework throughout the organization</li>
+                        <li>Managed cross-functional teams and facilitated collaboration</li>
+                        <li>Negotiated contracts and agreements to maximize profits</li>
+                        <li>Responsible for team ramping by working with support teams (TAG, WPC, etc.)</li>
+                        <li>Ensured timely and successful delivery of solutions/services according to client needs and objectives</li>
+                    </ul>
+                </div>
+
+                <!-- HCL Technologies Ltd. (2015-2016) -->
+                <div class="job-entry">
+                    <div class="job-header">HCL Technologies Ltd.</div>
+                    <span class="duration">February 2015 - February 2016</span>
+                    <div class="job-title">Associate Manager</div>
+                    <ul>
+                        <li>Worked as PMO/Project Coordinator, collaborating with Solution Heads and Project Managers</li>
+                        <li>Focused on recruiting qualified consultants for top-tier clients in coordination with Recruitment team</li>
+                        <li>Coordinated consultant onboarding and project allocation</li>
+                        <li>Utilized JIRA extensively to generate reports and dashboards for decision-making support</li>
+                        <li>Facilitated Project Kickoff meetings by coordinating with Project Managers, Solution Owners, and Business Heads</li>
+                        <li>Managed redeployment and proactive recruitment, maintaining pipeline of consultants based on market trends</li>
+                        <li>Coordinated team dependencies to ensure seamless workflow</li>
+                    </ul>
+                </div>
+
+                <!-- Scalene - HCL Technologies Ltd. -->
+                <div class="job-entry">
+                    <div class="job-header">Scalene - HCL Technologies Ltd.</div>
+                    <span class="duration">May 2013 - February 2015</span>
+                    <div class="job-title">Sr. Associate</div>
+                    <ul>
+                        <li>Exercised recruitment screening techniques to ensure high-quality candidate selection</li>
+                        <li>Interfaced with Project Managers and BU Leads on requirement gathering</li>
+                        <li>Sourced candidates through multiple channels including databases, job sites, LinkedIn, and vendor networks</li>
+                        <li>Confirmed assignment logistics between hiring managers and suppliers</li>
+                        <li>Facilitated onboarding activities and coordinated with SPOCs for background checks, renewals, and site-specific requirements</li>
+                        <li>Managed vendor relationships for contingent workforce and ensured MSA contract adherence</li>
+                        <li>Conducted end-to-end candidate follow-up for pre and post-offer activities</li>
+                    </ul>
+                </div>
+
+                <!-- Mastech Inc. -->
+                <div class="job-entry">
+                    <div class="job-header">Mastech Inc.</div>
+                    <span class="duration">November 2011 - April 2013</span>
+                    <div class="job-title">Senior Technical Recruiter</div>
+                    <ul>
+                        <li>Identified, interviewed, screened, and matched qualified candidates to specific job requirements</li>
+                        <li>Maintained relationships with existing clients and generated new business</li>
+                        <li>Served as single point of contact for Client Delivery with responsibility for account management and strategic recruitment process development</li>
+                        <li>Coordinated new hire packages, post-hire compliance, offer letters, and new hire orientations</li>
+                        <li>Ensured documentation compliance with equal employment opportunity and labor laws (OFCCP compliance)</li>
+                        <li>Gathered requirements, sourced candidates, negotiated offers, and closed deals</li>
+                        <li>Handled H1B transfers and managed complete transfer process</li>
+                    </ul>
+                </div>
+
+                <!-- Aditi Technologies -->
+                <div class="job-entry">
+                    <div class="job-header">Aditi Technologies</div>
+                    <span class="duration">May 2010 - December 2010</span>
+                    <div class="job-title">Senior Technical Recruiter</div>
+                    <ul>
+                        <li>Sourced candidate resumes from vendors and job portals</li>
+                        <li>Screened resumes based on educational qualifications, technical and communication skills</li>
+                        <li>Maintained expertise with Dice, Monster, and Career Builder platforms</li>
+                        <li>Maintained personal database for streamlined submissions</li>
+                        <li>Interviewed candidates and evaluated communication, technical skills, and confidence levels</li>
+                        <li>Scheduled interviews and provided timely feedback to employers and consultants</li>
+                        <li>Extended offers and maintained contact until project start</li>
+                        <li>Maintained relationships with consultants post-placement to ensure satisfaction</li>
+                        <li>Cultivated vendor relationships to increase business opportunities</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- EXPERIENCE SUMMARY -->
+        <div class="section">
+            <div class="section-header" onclick="toggleSection(this)">
+                EXPERIENCE SUMMARY
+            </div>
+            <div class="section-content">
+                <table>
+                    <tr>
+                        <th>Company Name</th>
+                        <th>Duration</th>
+                    </tr>
+                    <tr>
+                        <td>HCL Software</td>
+                        <td>January 2025 - Present</td>
+                    </tr>
+                    <tr>
+                        <td>Comcast</td>
+                        <td>April 2022 - January 2025</td>
+                    </tr>
+                    <tr>
+                        <td>HCL Technologies</td>
+                        <td>February 2015 - February 2022</td>
+                    </tr>
+                    <tr>
+                        <td>Scalene Works People Solution LLP</td>
+                        <td>May 2013 - February 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Mastech Digital</td>
+                        <td>November 2011 - April 2013</td>
+                    </tr>
+                    <tr>
+                        <td>Aditi Technologies</td>
+                        <td>May 2010 - December 2010</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleSection(header) {
+            const content = header.nextElementSibling;
+            header.classList.toggle('active');
+            content.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
